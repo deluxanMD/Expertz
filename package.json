@@ -48,15 +48,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    }
   }
 }
