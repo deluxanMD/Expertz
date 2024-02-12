@@ -8,7 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "coverage": "jest --coverage --watchAll",
+    "coverage": "jest --coverage",
     "lint:check": "npx eslint src --ext .js,.jsx,.ts,.tsx  --resolve-plugins-relative-to .eslintrc.json",
     "lint:fix": "npx eslint src --ext .js,.jsx,.ts,.tsx --fix  --resolve-plugins-relative-to .eslintrc.json",
     "prettier:check": "npx prettier --check src",
