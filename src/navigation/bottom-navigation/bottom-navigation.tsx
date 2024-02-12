@@ -1,7 +1,8 @@
 import {StyleSheet} from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import App from '../../../App';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import HomeScreen from '../../screens/home/home.screen';
+import ProfileScreen from '../../screens/profile/profile.screen';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -10,7 +11,7 @@ const BottomNavigation = () => {
     <Tab.Navigator barStyle={styles.barStyle} labeled={false}>
       <Tab.Screen
         name="Home"
-        component={App}
+        component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => (
@@ -20,7 +21,7 @@ const BottomNavigation = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={App}
+        component={ProfileScreen}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({color}) => (

@@ -1,12 +1,13 @@
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
-import {NavigationContainer} from '@react-navigation/native';
-import StackNavigation from './src/navigation/stack-navigation/stack-navigation';
+import {Provider} from 'react-redux';
+import {store} from './src/store';
+import App from './App';
 
 const Root = () => (
-  <NavigationContainer>
-    <StackNavigation />
-  </NavigationContainer>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
 AppRegistry.registerComponent(appName, () => Root);
