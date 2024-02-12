@@ -6,4 +6,5 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/no-unstable-nested-components': 'off',
   },
+  ignorePatterns: [],
 };
