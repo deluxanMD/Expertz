@@ -14,8 +14,11 @@ const SettingsScreen = () => {
 
   return (
     <View
-      style={{backgroundColor: theme.colors.background, ...styles.container}}>
-      <Button onPress={handleThemeToggle}>Toggle Theme</Button>
+      testID="Settings.Screen.Container"
+      style={{...styles.container, backgroundColor: theme.colors.background}}>
+      <Button onPress={handleThemeToggle} testID="Toggle.Theme.Button">
+        Toggle Theme
+      </Button>
     </View>
   );
 };

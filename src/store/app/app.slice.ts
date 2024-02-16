@@ -1,15 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit';
 // import type {PayloadAction} from '@reduxjs/toolkit';
 
-export interface CounterState {
+export interface AppState {
   mode: 'light' | 'dark';
 }
 
-const initialState: CounterState = {
+export const initialState: AppState = {
   mode: 'light',
 };
 
-export const counterSlice = createSlice({
+export const AppSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
@@ -20,6 +20,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const {toggleTheme} = counterSlice.actions;
+export const {toggleTheme} = AppSlice.actions;
 
-export default counterSlice.reducer;
+export default AppSlice.reducer;

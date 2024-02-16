@@ -7,6 +7,7 @@ const ProfileScreen = () => {
 
   return (
     <View
+      testID="Profile.Screen.Container"
       style={{backgroundColor: theme.colors.background, ...styles.container}}>
       <Text>ProfileScreen</Text>
     </View>
