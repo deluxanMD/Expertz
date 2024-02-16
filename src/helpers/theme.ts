@@ -80,7 +80,7 @@ export const CombinedDarkTheme = {
     onError: 'rgb(105, 0, 5)',
     errorContainer: 'rgb(147, 0, 10)',
     onErrorContainer: 'rgb(255, 180, 171)',
-    background: 'rgb(29, 27, 30)',
+    background: 'rgb(0, 0, 0)',
     onBackground: 'rgb(231, 225, 229)',
     surface: 'rgb(29, 27, 30)',
     onSurface: 'rgb(231, 225, 229)',

@@ -1,9 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {useTheme} from 'react-native-paper';
 
 const ProfileScreen = () => {
+  const theme = useTheme();
+
   return (
-    <View>
+    <View
+      style={{backgroundColor: theme.colors.background, ...styles.container}}>
       <Text>ProfileScreen</Text>
     </View>
   );
@@ -11,5 +15,10 @@ const ProfileScreen = () => {
 
 export default ProfileScreen;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

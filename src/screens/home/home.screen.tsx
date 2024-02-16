@@ -1,27 +1,24 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {useDispatch} from 'react-redux';
-import {Button} from 'react-native-paper';
-import {toggleTheme} from '../../store/app/app.slice';
+import {useTheme} from 'react-native-paper';
 
 const HomeScreen = () => {
-  const dispatch = useDispatch();
-
-  const handleThemeToggle = () => {
-    dispatch(toggleTheme());
-  };
+  const theme = useTheme();
 
   return (
-    <View>
+    <View
+      style={{backgroundColor: theme.colors.background, ...styles.container}}>
       <Text>HomeScreen</Text>
-      <Button mode="contained" onPress={handleThemeToggle}>
-        Toggle Theme
-      </Button>
     </View>
   );
 };
 
 export default HomeScreen;
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

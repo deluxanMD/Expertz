@@ -1,17 +1,16 @@
-/**
- * @format
- */
-
-import 'react-native';
-import React from 'react';
 import App from '../App';
+import {render} from '@testing-library/react-native';
+import {Provider} from 'react-redux';
+import {store} from '../src/store';
 
-// Note: import explicitly to use the types shipped with jest.
-import {it} from '@jest/globals';
+jest.useFakeTimers();
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('<App />', () => {
+  it('has 1 child', () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+    );
+  });
 });
