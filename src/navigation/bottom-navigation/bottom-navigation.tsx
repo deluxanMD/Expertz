@@ -1,16 +1,24 @@
 import {StyleSheet} from 'react-native';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import App from '../../../App';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import HomeScreen from '../../screens/home/home.screen';
+import ProfileScreen from '../../screens/profile/profile.screen';
+import SettingsScreen from '../../screens/settings/settings.screen';
+import {useTheme} from 'react-native-paper';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomNavigation = () => {
+  const theme = useTheme();
+
   return (
-    <Tab.Navigator barStyle={styles.barStyle} labeled={false}>
+    <Tab.Navigator
+      barStyle={{backgroundColor: theme.colors.background, ...styles.barStyle}}
+      labeled={false}>
       <Tab.Screen
         name="Home"
-        component={App}
+        component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => (
@@ -20,11 +28,21 @@ const BottomNavigation = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={App}
+        component={ProfileScreen}
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="account" color={color} size={22} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{
+          tabBarLabel: 'Profile',
+          tabBarIcon: ({color}) => (
+            <MaterialIcons name="settings" color={color} size={22} />
           ),
         }}
       />
@@ -34,8 +52,8 @@ const BottomNavigation = () => {
 
 const styles = StyleSheet.create({
   barStyle: {
-    backgroundColor: 'white',
     height: 80,
+    elevation: 10,
   },
 });
 
