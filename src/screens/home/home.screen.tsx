@@ -7,7 +7,8 @@ const HomeScreen = () => {
 
   return (
     <View
-      style={{backgroundColor: theme.colors.background, ...styles.container}}>
+      style={{backgroundColor: theme.colors.background, ...styles.container}}
+      testID="Home.Screen.Container">
       <Text>HomeScreen</Text>
     </View>
   );

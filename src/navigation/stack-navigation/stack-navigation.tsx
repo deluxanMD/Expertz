@@ -1,18 +1,16 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomNavigation from '../bottom-navigation/bottom-navigation';
-import Login from '../../auth/login.screen';
+import SplashScreen from '../../screens/auth/splash/splash.screen';
 
 const Stack = createNativeStackNavigator();
 
+const screenOptions = {headerShown: false};
+
 const StackNavigation = () => {
   return (
-    <Stack.Navigator initialRouteName="App">
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen
-        name="App"
-        component={BottomNavigation}
-        options={{headerShown: false}}
-      />
+    <Stack.Navigator initialRouteName="Splash" screenOptions={screenOptions}>
+      <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="App" component={BottomNavigation} />
     </Stack.Navigator>
   );
 };
