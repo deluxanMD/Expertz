@@ -5,7 +5,11 @@ coverage:
     project:
       default:
         target: 80.0
-        threshold: "20.0"
+        threshold: "0.0"
+    patch: 
+      default:
+        target: 80.0
+        threshold: "0.0"
 ignore:
 - ^src/index.js.*
 - (?s:\^src/reportWebVitals\.js[^\/]*)\Z
