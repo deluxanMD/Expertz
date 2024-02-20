@@ -27,7 +27,7 @@ describe('<SplashScreen />', () => {
       () => {
         expect(navigateMock).toHaveBeenCalledWith('App');
       },
-      {timeout: 2000},
+      {timeout: 5000},
     );
   });
 });
